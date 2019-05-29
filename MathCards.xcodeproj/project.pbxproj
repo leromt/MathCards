@@ -12,6 +12,11 @@
 		2E2444672298AB73006C27F1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E2444652298AB73006C27F1 /* Main.storyboard */; };
 		2E2444692298AB74006C27F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E2444682298AB74006C27F1 /* Assets.xcassets */; };
 		2E24446C2298AB74006C27F1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E24446A2298AB74006C27F1 /* LaunchScreen.storyboard */; };
+		2EC91A7D2298F9F600A5E999 /* vaderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC91A7C2298F9F600A5E999 /* vaderController.swift */; };
+		2EC91A83229A188800A5E999 /* PreferenceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC91A82229A188800A5E999 /* PreferenceModel.swift */; };
+		2EC91A85229A1B3F00A5E999 /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2EC91A84229A1B3F00A5E999 /* Preferences.plist */; };
+		2EC91A87229A1D8D00A5E999 /* PreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC91A86229A1D8D00A5E999 /* PreferencesController.swift */; };
+		2EC91A89229CA6E700A5E999 /* MathCardButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC91A88229CA6E700A5E999 /* MathCardButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		2E2444682298AB74006C27F1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E24446B2298AB74006C27F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E24446D2298AB74006C27F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2EC91A7C2298F9F600A5E999 /* vaderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vaderController.swift; sourceTree = "<group>"; };
+		2EC91A82229A188800A5E999 /* PreferenceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceModel.swift; sourceTree = "<group>"; };
+		2EC91A84229A1B3F00A5E999 /* Preferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Preferences.plist; sourceTree = "<group>"; };
+		2EC91A86229A1D8D00A5E999 /* PreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesController.swift; sourceTree = "<group>"; };
+		2EC91A88229CA6E700A5E999 /* MathCardButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathCardButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +70,11 @@
 				2E2444682298AB74006C27F1 /* Assets.xcassets */,
 				2E24446A2298AB74006C27F1 /* LaunchScreen.storyboard */,
 				2E24446D2298AB74006C27F1 /* Info.plist */,
+				2EC91A82229A188800A5E999 /* PreferenceModel.swift */,
+				2EC91A84229A1B3F00A5E999 /* Preferences.plist */,
+				2EC91A86229A1D8D00A5E999 /* PreferencesController.swift */,
+				2EC91A7C2298F9F600A5E999 /* vaderController.swift */,
+				2EC91A88229CA6E700A5E999 /* MathCardButton.swift */,
 			);
 			path = MathCards;
 			sourceTree = "<group>";
@@ -123,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E24446C2298AB74006C27F1 /* LaunchScreen.storyboard in Resources */,
+				2EC91A85229A1B3F00A5E999 /* Preferences.plist in Resources */,
 				2E2444692298AB74006C27F1 /* Assets.xcassets in Resources */,
 				2E2444672298AB73006C27F1 /* Main.storyboard in Resources */,
 			);
@@ -135,8 +151,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EC91A83229A188800A5E999 /* PreferenceModel.swift in Sources */,
+				2EC91A87229A1D8D00A5E999 /* PreferencesController.swift in Sources */,
+				2EC91A7D2298F9F600A5E999 /* vaderController.swift in Sources */,
 				2E2444642298AB73006C27F1 /* ViewController.swift in Sources */,
 				2E2444622298AB73006C27F1 /* AppDelegate.swift in Sources */,
+				2EC91A89229CA6E700A5E999 /* MathCardButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
