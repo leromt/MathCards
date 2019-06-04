@@ -26,6 +26,7 @@ class PreferencesController: UIViewController
     @IBAction func saveTapped(_ sender: Any) {
 
        saveToPreferences()
+        cancelPressed(sender)
         print("Saved")
     }
     @IBAction func cancelPressed(_ sender: Any) {
@@ -68,7 +69,7 @@ class PreferencesController: UIViewController
 
             highestNumberLabel.text = String(preferences.highestNumber)
             numberOfQuestionsLabel.text = String(preferences.numberOfQuestions)
-            numberOfQuestionsSlider.value = Float(preferences.highestNumber)
+            numberOfQuestionsSlider.value = Float(preferences.numberOfQuestions)
             highestNumberSlider.value = Float(preferences.highestNumber)
             print(preferences.highestNumber)
         }
@@ -82,30 +83,40 @@ class PreferencesController: UIViewController
 
     private func saveToPreferences(){
 
+        let newHighestNumber = Int(round(highestNumberSlider.value))
+        let newNumberOfQuestions = Int(round(numberOfQuestionsSlider.value))
+
+        numberOfQuestions = newNumberOfQuestions
+        highestNumber = newHighestNumber
+
         let encoder = PropertyListEncoder()
         encoder.outputFormat = .xml
 
         let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("Preferences.plist")
 
-        let preferences = Preferences(highestNumber: highestNumber, numberOfQuestions: numberOfQuestions)
+        let preferences = Preferences(highestNumber: newHighestNumber, numberOfQuestions: newNumberOfQuestions)
 
         do {
             let data = try encoder.encode(preferences)
-            try data.write(to: path)
+            try data.write(to: URL(fileURLWithPath: path.path))
             print("Save pressed")
             print(preferences)
             print("data follows")
             print(data)
             print("data ended")
-            if  let path        = Bundle.main.path(forResource: "Preferences", ofType: "plist"),
-                let xml         = FileManager.default.contents(atPath: path),
+            let path        = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0].appendingPathComponent("Preferences.plist")
+            if  //let path        = Bundle.main.path(forResource: "Preferences", ofType: "plist"),
+                let xml         = FileManager.default.contents(atPath: path.path),
                 let preferences = try? PropertyListDecoder().decode(Preferences.self, from: xml){
                 print("after save, rereading preferences")
                 print(preferences)
                 print("rereading done")
             }
         } catch {
+            print("error starts")
+
             print(error)
+            print("error ends")
         }
 
         print(preferences)
